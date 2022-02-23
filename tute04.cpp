@@ -29,19 +29,17 @@ int main() {
 }
 long nCr(int n, int r)
 {
-  float total;
-
-  total = Factorial(n) /(Factorial(r)*(Factorial(n) - Factorial(r)));
+  
+  return Factorial(n) / (Factorial(r) * Factorial(n - r));
 }
 long Factorial(int no)
 {
-  int i;
-  int total = 0;
-  for(i = no; i >=1; --i)
-  {
-    total = total + (i * i);
-    return 0;
+ int Factorial = 1;
+    for (int i = 2; i <= no; i++)
+        Factorial = Factorial * i;
+    return Factorial;
 
 
   }
-}
+
+
